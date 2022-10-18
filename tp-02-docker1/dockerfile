@@ -1,0 +1,8 @@
+FROM rust:1.64
+RUN useradd -rms /bin/bash webuser
+WORKDIR /home/webuser/app
+RUN chown webuser:webuser ../app
+COPY . .
+USER webuser
+RUN cargo build --release
+ENTRYPOINT ["./target/release/tp-01"]
