@@ -35,3 +35,5 @@ You can curl it with :
 ```bash
 curl -v localhost:8080/ping
 ```
+
+> You have a trivy scan result in the `scan.txt` file.
